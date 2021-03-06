@@ -1,0 +1,25 @@
+<div class="container my-4">
+<div class="card">  
+      <div class="card-header text-center">
+         <b> <%= @galery.gallery_title %></b>
+      </div>
+      <div class="card-body">
+
+          <strong>Images:</strong>
+          <div>
+               <% (0...@galery.images.count).each do |image|%>
+               <%=image_tag(@galery.thumbnail(image),class:"img-thumbnail") %>
+               <%end%>
+          </div>
+        </div>
+
+        <div class="card-footer">
+            <% if user_signed_in? %>
+            <%= link_to 'Edit', edit_galery_path(@galery) ,class:"btn btn-outline-secondary btn-sm" %>
+            <%end%>
+            <%= link_to 'Back', galeries_path ,class:"btn btn-outline-secondary btn-sm"%>
+        </div>
+</div>
+</div>
+
+

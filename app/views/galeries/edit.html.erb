@@ -1,0 +1,30 @@
+<div class="container my-4">
+<h1>Update Gallery</h1>
+</div>
+
+<%= render 'form', galery: @galery %>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <strong>Images:</strong>
+    </div>
+   <div class="card-body">
+       <% if @galery.images.attached? %>
+        <% @galery.images.each do |image| %>
+
+        <%= image_tag image, class: "img-thumbnail",:size=>"180x200" %>
+        <%= link_to "Remove", delete_image_attachment_galery_url(image.signed_id),class:"btn btn-sm btn-outline-secondary ",
+                method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+       <% end %>
+      <% end %>
+    </div>
+    <div class="card-footer">
+        <%= link_to 'Show Updated Images', @galery ,class:"btn btn-sm btn-outline-secondary"%> 
+        <%= link_to 'Back ', galeries_path ,class:"btn btn-sm btn-outline-secondary"%>
+   </div>
+</div>
+
+
+
+</div>

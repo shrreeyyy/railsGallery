@@ -1,0 +1,59 @@
+<div class="container my-4">
+
+<div class="card">
+  
+  <%= form_with(model: galery) do |form| %>
+  <% if galery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(galery.errors.count, "error") %> This Gallery Cant' be saved:</h2>
+
+      <ul>
+        <% galery.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="card-body">
+<div class="field mb-4">
+    <%= form.label :gallery_title %>
+    <%= form.text_field :gallery_title,class:"form-control" ,placeholder: "Gallery Title"%>       
+  </div>
+
+  <div class="field mb-4">
+    <%= form.label :description %>
+    <%= form.text_area :description ,class:"form-control" ,placeholder: "Description" %>
+  </div>
+
+  <div class="field mb-4">
+    <%= form.label :email %>
+    <%= form.text_field :email,class:"form-control" ,placeholder: "Email" %>
+  </div>
+
+  <div class="field mb-4">
+    <%= form.label :images %>
+    <%= form.file_field :images,multiple:true,class:"form-control"%>
+  </div>
+
+  <div class="field mb-4">
+    <%= form.label :all_tag %>
+    <%= form.text_field :all_tag ,class:"form-control" %>
+  </div>  
+
+  <div class="field">
+    <%= form.label :published %>
+    <%= form.check_box :published%>
+  </div>
+
+  <div class="field mb-4">
+    <%= form.number_field :user_id,id: :galery_user_id,class:"form-control",value:current_user.id ,type: :hidden %>
+  </div>
+ 
+
+  <div class="actions my-4">
+    <%= form.submit class:"btn btn-outline-secondary"%>
+  </div>
+<% end %>
+  </div>
+</div>
+</div>

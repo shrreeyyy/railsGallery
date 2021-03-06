@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ .searchBtn {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: blue
+}
+
+.parallax {
+    background-image: url("logo1.jpeg");
+    height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+}
+body{
+ font-family:  "Lato", sans-serif;
+}
+
+.heading{
+    padding-top: 240px;
+    font-size: 35px;
+    font-weight: 900;
+    font-family: 'Josefin Sans';
+}
+.heading_two{
+  font-family: 'Architects Daughter';
+  padding-top: 180px;
+    font-size: 60px;
+    font-weight: 900;
+}
+  
+  
+.blog-footer {
+    padding: 2.5rem 0;
+    color: #727272;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+}
+.hat {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-22%,52%);
+  z-index: 100;
+}
+.cat {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-40%,52%);
+  z-index: 100;
+}
+
+
+
+
+    
