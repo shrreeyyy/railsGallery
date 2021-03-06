@@ -20,7 +20,7 @@
 }
 
 .parallax {
-    background-image: url("logo1.jpeg");
+    background-image: url("https://images.unsplash.com/photo-1578985824626-945a6f546304?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Z2FsbGVyeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
     height: 600px;
     background-attachment: fixed;
     background-position: center;
