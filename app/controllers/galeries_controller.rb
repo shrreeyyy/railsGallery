@@ -4,8 +4,6 @@ class GaleriesController < ApplicationController
   def index
       @q= Galery.ransack(params[:q])
       @galeries = @q.result.includes(:tags,:taggings)
-      
-    # @galeries = Galery.all
   end
 
 
@@ -13,7 +11,6 @@ class GaleriesController < ApplicationController
   end 
 
   def new
-    # @galery = Galery.new
     @galery = current_user.galeries.build
   end
 
@@ -21,7 +18,6 @@ class GaleriesController < ApplicationController
   end
 
   def create
-    # @galery = Galery.new(galery_params)
     @galery = current_user.galeries.build(galery_params)
  
 

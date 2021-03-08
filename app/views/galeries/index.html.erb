@@ -1,7 +1,6 @@
-
 <% if user_signed_in? %>
 <div class="parallax mb-2 mw-100">
-<h1 class="text-white d-flex justify-content-center text-wrap heading_two">Capture It All</h1>
+<h1 class="text-white d-flex justify-content-center text-wrap heading_two text-center">Capture It All</h1>
   <form class="d-flex container col-sm-3 justify-content-center">
           <%= search_form_for @q do |f| %>
                          <%= f.search_field :tags_name_cont ,class:"form-control searchBtn mx-2",placeholder: "Search By Tags"%> 
@@ -11,7 +10,7 @@
 <h6 class="text-white d-flex justify-content-center text-wrap heading ">Galleries Available</h6></div>
 <%else%>
 <div class="parallax mb-2 mw-100">
-<h1 class="text-white d-flex justify-content-center text-wrap heading_two">Capture It All</h1>
+<h1 class="text-white d-flex justify-content-center text-wrap heading_two text-center">Capture It All</h1>
   <form class="d-flex container col-sm-3 justify-content-center">
           <%= search_form_for @q do |f| %>
                          <%= f.search_field :tags_name_cont ,class:"form-control searchBtn mx-2",placeholder: "Search By Tags"%> 

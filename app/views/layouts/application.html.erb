@@ -7,8 +7,13 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-<link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!--Google's Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   
     <title>Gallery</title>
 
     <%= csrf_meta_tags %>
@@ -17,21 +22,22 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <body class="bg-light">
  
-  <% if notice %>
-  <p class="alert alert-success alert-dismissible fade show my-0"><%= notice %><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger alert-dismissible fade show my-0"><%= alert %> <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></p>
-<% end %>
- <%=render 'home/header' %>
-  <div>
-   <%= yield %>
-   </div>
+      <% if notice %>
+        <p class="alert alert-success alert-dismissible fade show my-0"><%= notice %><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger alert-dismissible fade show my-0"><%= alert %> <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></p>
+      <% end %>
+      <%=render 'home/header' %>
+      <div>
+        <%= yield %>
+      </div>
 
    <footer class="blog-footer mt-4 w-100 bg-dark text-white">
-  <p>@2021 Photo<span class="text-primary">Map</span> <br>Back it up. Get it back.</p>
+  <p>@2021 Photo<span class=  "text-primary">Map</span> <br>Back it up. Get it back.</p>
 </footer>
     
 
